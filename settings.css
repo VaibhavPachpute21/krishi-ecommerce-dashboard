@@ -1,0 +1,59 @@
+@media (min-width:992px) {
+
+}
+
+.avatar{
+    padding: 10px;
+    margin: 10px;
+    border: lightgray solid 1px;
+    background-color: rgb(47, 121, 47);
+    height: 35vh;
+}
+
+.avatar img{
+    width: 150px;
+    border: lightgray solid 1px;
+}
+
+.avatar h3{
+    color: white;
+}
+
+.avatar p{
+    color: white;
+}
+
+.sCard{
+    padding: 10px;
+    margin: 10px;
+    border-bottom: lightgray solid 1px;
+}
+
+.sCard i{
+    color: rgba(39, 127, 60, 1);
+    font-size: 30px;
+}
+
+.sCard strong{
+    font-size: 20px;
+}
+
+.sCard:hover{
+    cursor: pointer;
+    border: gray solid 2px;
+    border-radius: 15px;
+}
+
+@media screen and (max-width:600px) {
+   
+.avatar{
+    padding: 10px;
+    margin: 10px;
+    border: lightgray solid 1px;
+    background-color: rgb(47, 121, 47);
+    height: 45vh;
+}
+
+}
+
+

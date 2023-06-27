@@ -1,0 +1,35 @@
+.vs1
+{
+padding: 30px ; 
+border-style: solid;
+border-radius: 15px; 
+margin: 20px;
+margin-left: 25px;
+margin-right: 25px;
+border: 1px solid lightgray;
+}
+
+.vs2
+{
+    padding: 5px ;
+    margin-bottom: 20px;
+}
+
+.vddown
+{
+    background-color: white;
+     color:black;
+
+}
+.vh1
+{
+    font-size:16px ;
+}
+.vs3
+{
+    text-align: center ;
+}
+.vrow
+{
+    margin-bottom: 20px ;
+}

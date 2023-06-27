@@ -1,0 +1,174 @@
+@import url('http://fonts.cdnfonts.com/css/gilroy-bold');
+body , *{
+  font-family: 'Gilroy-SemiBold', sans-serif;
+}
+
+.prompt-container:before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 15px;
+}
+.prompt-container:closed {
+  display: none;
+}
+
+.prompt {
+  border-radius: 15px;
+  position: fixed;
+  top: 50px;
+  left: 0px;
+  right: 0px;
+  margin: 0 auto;
+  display: block;
+  background: white;
+  padding: 40px;
+  width: 600px;
+  max-width: 100%;
+  z-index: 1;
+}
+
+#prompt .btn-logout{
+  width: 100%;
+  border: rgba(128, 128, 128, 0.461) solid 1px;
+  border-radius: 0px !important;
+  background-color: rgba(238, 233, 233, 0.603);
+}
+
+#prompt .btn-stay{
+  width: 100%;
+  color: white;
+  border-radius: 0px !important;
+  background-color: #219050;
+}
+
+
+@media (min-width:992px) {
+  #main {
+    padding-left: 205px;
+  }
+      .vertical-nav {
+      position: absolute;
+      top: 49.5px;
+      left: 0;
+      width: 200px;
+      height: 100vh;
+      background-color: #f8f8f8;
+      overflow-y: auto;
+      padding-top: 0px;
+      border: lightgray solid 1px;
+  
+    }
+  
+    .navbar {
+      border-bottom: lightgrey solid 1px;
+    }
+
+  
+  }
+
+  .navbar {
+    border-bottom: lightgrey solid 1px;
+  }
+  .active {
+    background-color: lightskyblue;
+  }
+
+  .vertical-nav .nav-item {
+    padding: 10px;
+    margin: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: lightgray solid 1px;
+  }
+  
+  .vertical-nav .nav-item .nav-link {
+    color: black;
+    font-weight: bold;
+  }
+  
+  .vertical-nav .nav-item i {
+    color: green;
+    font-size: 20px;
+  }
+
+  nav a i{
+    text-decoration: none;
+    color: black;
+}
+
+nav img{
+  width:30px;
+}
+
+
+/* footer */
+.footerClass img{
+  align-self: center;
+  border-radius: 70px;
+}
+.footerClass {
+  padding: 30px;
+  background: rgba(39, 127, 60, 1);
+  color: white;
+}
+
+.footerClass i{
+  color: white;
+}
+
+.footerClass ul{
+  list-style: none;
+}
+
+.fheading {
+  font-size: 20px;
+}
+
+.fnav li {
+  padding: 10px;
+  font-size: 12px;
+}
+
+.footerClass form input{
+  border-radius: 90px; color: #219050;
+}
+
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  color: white;
+  background-color: white;
+  height: 3px;
+}
+
+.copyright-area {
+  padding: 25px 0;
+}
+
+.copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  color: white;
+}
+
+/* .copyright-text p a{
+  color: #ff5e14;
+} */
+.footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+/* .footer-menu li:hover a{
+  color: #ff5e14;
+} */
+.footer-menu li a {
+  font-size: 14px;
+  color: white;
+}

@@ -1,0 +1,112 @@
+.addpstyle1 {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Poppins";
+    text-align: center;
+    border-radius: 15px;
+    margin-top: 30px;
+    margin-right: 500px;
+    margin-left: 30px;
+    padding: 30px;
+    margin-bottom: 30px;
+    color: #00000075;
+    border: 1px solid lightgray;
+}
+
+.adp1 {
+    margin-top: 10%;
+}
+
+.adb1 {
+    margin-bottom: 20%;
+    margin-top: 10px;
+}
+
+.adh1 {
+    padding: 5%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.adh2 {
+    font-size: 20px;
+    color: #00330c;
+    font-weight: 500;
+    font-family: Gilroy;
+    text-align: left;
+}
+
+.adh3 {
+    background-color: green;
+    font-size: 500px;
+    padding: 1%;
+}
+
+.adh4 {
+    border-style: solid;
+    border-color: rgba(128, 128, 128, 0.295);
+    border-radius: 7%;
+    padding: 2%;
+    margin-left: 30px;
+}
+
+.adh5 {
+    font-size: 18px;
+    color: #000000;
+    font-weight: 500;
+    font-family: Poppins;
+    text-align: left;
+}
+
+.adh6 {
+    font-size: 18px;
+    color: #000000;
+    font-weight: 500;
+    font-family: Poppins;
+    text-align: center;
+    border-color: rgba(128, 128, 128, 0.295);
+    border-radius: 5%;
+}
+
+.adh7 {
+    font-size: 18px;
+    color: #000000;
+    font-weight: 500;
+    font-family: Poppins;
+    text-align: center;
+    border-style: solid;
+    border-color: rgba(128, 128, 128, 0.295);
+    border-radius: 5%;
+    padding: 10px;
+}
+
+.adh8 {
+    font-size: 18px;
+    color: #000000;
+    font-weight: 500;
+    font-family: Poppins;
+    text-align: left;
+    border-style: solid;
+    border-color: rgba(128, 128, 128, 0.295);
+    border-radius: 5%;
+    padding: 10px;
+}
+
+.adh9 {
+    font-size: 10x;
+    color: #000000;
+    font-weight: 500;
+    font-family: Poppins;
+    text-align: left;
+    margin-left: 30px;
+}
+
+.adh10 {
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.adh11 {
+    margin: 2%;
+}

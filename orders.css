@@ -1,0 +1,195 @@
+@media (min-width:992px) {
+  .filterMenu {
+    padding: 10px;
+    margin: 10px;
+
+  }
+
+  .filterMenu .btn-group {
+
+    padding: 0px;
+    margin: 0px;
+
+  }
+
+  .filterMenu .dropdown .btn {
+    color: black;
+    background-color: rgba(211, 211, 211, 0.566);
+    border-color: lightgray;
+  }
+
+  .order {
+    padding: 10px;
+    margin: 10px;
+    border: lightgray solid 1px;
+    border-radius: 15px;
+  }
+
+  .order .OrderCard {
+    padding: 10px;
+    border-bottom: lightgray solid 1px;
+  }
+
+  .order .OrderCard img {
+    width: 100%;
+    height: 60px;
+  }
+
+  .order .OrderCard span {
+    color: gray;
+    font-weight: 500;
+  }
+
+
+}
+
+
+.order .OrderCard {
+  padding: 10px;
+  border-bottom: lightgray solid 1px;
+}
+.order .OrderCard span {
+  color: gray;
+  font-weight: 500;
+}
+/* btns */
+.order .OrderCard .btn-success {
+  margin: 5px;
+  background-color: rgba(144, 238, 144, 0.527);
+  color: green;
+  width: 100%;
+  font-weight: 600;
+  border: none;
+}
+
+.order .OrderCard .btn-danger {
+  margin: 5px;
+  background-color: rgba(241, 135, 135, 0.6);
+  color: red;
+  width: 100%;
+  font-weight: 600;
+  border: none;
+}
+
+.order .OrderCard .btn-warning {
+  margin: 5px;
+  background-color: rgba(238, 176, 61, 0.384);
+  color: orange;
+  width: 100%;
+  font-weight: 600;
+  border: none;
+}
+
+.order .OrderCard .btn {
+  width: 60%;
+}
+
+/* tabs */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.tabs label {
+  order: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  /* background-color: rgba(128, 128, 128, 0.151); */
+
+  transition: background ease 0.3s;
+}
+
+.tabs .tab {
+  position: relative;
+  left: 0;
+  order: 9;
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  display: none;
+  /* padding: 1rem; */
+  padding: 20px;
+
+}
+
+.tabs input[type="radio"] {
+  display: none;
+}
+
+.tabs input[type="radio"]:checked+label+.tab {
+  display: block;
+}
+
+
+
+@media screen and (max-width:600px) {
+  .filterMenu .dropdown .btn {
+    margin: 10px;
+    color: black;
+    background-color: rgba(211, 211, 211, 0.566);
+    border-color: lightgray;
+  }
+
+  .order {
+    padding: 1px;
+    margin: 1px;
+    border: lightgray solid 1px;
+    border-radius: 15px;
+  }
+
+  .order .OrderCard img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .tabs .tab,
+  .tabs label {
+    order: initial;
+  }
+
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 100%;
+    margin-bottom: 85px;
+
+  }
+
+  .tabs label {
+    order: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    cursor: pointer;
+  
+    transition: background ease 0.3s;
+  }
+
+  .tabs .tab {
+    margin-bottom: 30px;
+    position: relative;
+    left: 0;
+    order: 9;
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    display: none;
+    /* padding: 1rem; */
+    padding-bottom: 20px;
+
+  }
+
+  .tabs input[type="radio"] {
+    display: none;
+  }
+
+  .tabs input[type="radio"]:checked+label+.tab {
+    display: block;
+  }
+
+}

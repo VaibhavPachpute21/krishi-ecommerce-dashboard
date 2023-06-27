@@ -1,0 +1,242 @@
+@media (min-width:992px) {
+
+
+  .graph {
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    height: 50vh;
+    border-radius: 15px;
+    border: lightgray solid 1px;
+  }
+
+  .graph .container #myChart {
+    margin: 10px;
+    width: 100%;
+    max-width: 700px;
+    max-height: 40vh;
+  }
+
+  .recentOrders {
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    height: 50vh;
+    border-radius: 15px;
+    border: lightgray solid 1px;
+  }
+
+  .recentOrders .recentOrderCard img {
+    width: 100%;
+    height: 60px;
+  }
+  
+  .recentOrders .recentOrderCard span {
+    color: gray;
+  }
+
+}
+
+/* mobile */
+@media screen and (max-width:600px) {
+  .graph {
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 15px;
+    border: lightgray solid 1px;
+  }
+
+  .recentOrders {
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 15px;
+    border: lightgray solid 1px;
+  }
+  .recentOrders .recentOrderCard img {
+    width: 100px;
+    height: 100px;
+  }
+
+  
+  .recentOrders .recentOrderCard span {
+    color: gray;
+  }
+
+  .recentOrders .recentOrderCard .btn-success {
+    margin: 10px;
+    background-color: rgba(144, 238, 144, 0.527);
+    color: green;
+    width: 50% !important;
+    font-weight: 600;
+    border: none;
+  }
+  
+  .recentOrders .recentOrderCard .btn-danger {
+    margin: 10px;
+    background-color: rgba(241, 135, 135, 0.6);
+    color: red;
+    width: 50% !important;
+    font-weight: 600;
+    border: none;
+  }
+  
+.c1 {
+  display: block;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  width: 100%;
+  height: 30vh !important;
+  border: lightgray solid 1px !important;
+  border-radius: 15px;
+}
+
+.c2,.c3{
+  margin: 10px;
+  width: 100%;
+  height: 15vh !important;
+  border: lightgrey solid 1px;
+  border-radius: 15px;
+}
+
+#main .c2 canvas{
+  max-width: 75px;
+}
+
+#main .c3 canvas{
+  max-width: 75px;
+}
+
+.productRatings{
+  padding: 5px;
+  border: lightgray solid 1px;
+  border-radius: 15px;
+  height: max-content !important;
+}
+
+.productRatings .ratingCard img{
+  width: 100px !important;
+  height: 75px;
+}
+
+
+}
+
+/* mobile */
+
+
+
+.recentOrders .recentOrderCard {
+  padding: 10px;
+  border-bottom: lightgray solid 1px;
+}
+
+
+
+.recentOrders .recentOrderCard .btn-success {
+  background-color: rgba(144, 238, 144, 0.527);
+  color: green;
+  width: 100%;
+  font-weight: 600;
+  border: none;
+}
+
+.recentOrders .recentOrderCard .btn-danger {
+  background-color: rgba(241, 135, 135, 0.6);
+  color: red;
+  width: 100%;
+  font-weight: 600;
+  border: none;
+}
+
+.c1 {
+  margin: 10px;
+  padding: 10px;
+  width: 100%;
+  height: 25vh;
+  border: lightgrey solid 1px;
+  border-radius: 15px;
+}
+
+.c2,.c3{
+  margin: 10px;
+  width: 100%;
+  height: 12vh;
+  border: lightgrey solid 1px;
+  border-radius: 15px;
+}
+
+#main .c2 canvas{
+  max-width: 75px;
+}
+
+#main .c3 canvas{
+  max-width: 75px;
+}
+
+.semi-donut {
+  --percentage: 52.75;
+  width: 150px;
+  height: 75px;
+  position: relative;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  overflow: hidden;
+  color: black;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.semi-donut:after {
+  content: "";
+  width: 150px;
+  height: 150px;
+  border: 25px solid;
+  border-color: lightgreen lightgreen green green;
+  position: absolute;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  transform: rotate(calc(1deg * (-45 + var(--percentage) * 1.8)));
+  -webkit-animation: fillAnimation 1s ease-in;
+  animation: fillAnimation 1s ease-in;
+}
+
+.productRatings{
+  padding: 5px;
+  border: lightgray solid 1px;
+  border-radius: 15px;
+  height: 40vh;
+}
+
+.productRatings .ratingCard img{
+  width: 100%;
+  height: 75px;
+}
+
+.productRatings .ratingCard{
+  padding: 2px;
+}
+
+.productRatings .ratingCard i{
+  padding: 2px;
+  color: orange;
+}
+
+#main .productStatus{
+  border: lightgray solid 1px;
+  border-radius: 15px;
+  padding: 5px;
+  margin: 10px;
+
+}
+
+#main .productStatus canvas{
+  width:100%;max-width: 400px;
+}

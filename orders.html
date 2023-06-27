@@ -1,0 +1,1001 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Krishi Web</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <link href="orders.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <a class="navbar-brand" href="#"><img src="assets/img/logo.png"> Krishi Web</a>
+        <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <div class="container">
+                <ul class="navbar-nav mr-auto flex-column vertical-nav bg-white mt-2">
+                    <li class="nav-item">
+                        <a class="nav-link " href="dashboard.html"><i class="bi bi-grid-fill"></i> Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="vendorinvoice.html"><i class="bi bi-receipt"></i> Invoice</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inventory.html"><i class="bi bi-card-list"></i> Inventory</a>
+                    </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="vendoraddp.html"><i class="bi bi-people-fill"></i> Add product</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="orders.html"><i class="bi bi-box"></i> Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="settings.html"><i class="bi bi-gear-fill"></i> Settings</a>
+                    </li>
+                    <li class="nav-item" id="prompt-link">
+                        <div id="prompt-link">
+                            <a href="#prompt" class="open-prompt nav-link"><i class="bi bi-box-arrow-right"></i> Log
+                                out</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex justify-content-end">
+                <ul class="navbar-nav d-flex ms-max align-items-end flex-row-reverse">
+                    <li class="nav-item">
+                        <div class="d-flex flex-row">
+                            <a class="p-2"><i class="bi bi-search"></i></a>
+                            <a class="p-2"><i class="bi bi-cart"></i></a>
+                            <a class="p-2"><i class="bi bi-person"></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <section id="main">
+        <div class="container filterMenu mb-5">
+            <div class="row">
+                <div class="btn-group tabs d-flex col-md-12" role="group" aria-label="Basic radio toggle button group">
+                    <div class="dropdown col-md-2 text-center">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-list"></i>Filters
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                    <label class="btn btn-outline-success rounded-pill " for="btnradio1">All orders</label>
+                    <div class="tab bg-white">
+                        <div class="order">
+
+                            <div class="container-fluid OrderCard text-center align-middle">
+                                <div class="row ">
+                                    <div class="col-md-2">
+                                        <img src="../assets/img/product (4).png">
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <strong>Potato Seeds</strong>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>(01)</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>#A2NG91234</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-danger">Cancel</button>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-success">Accepted</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid  OrderCard text-center align-middle">
+                                <div class="row ">
+                                    <div class="col-md-2">
+                                        <img src="../assets/img/product (4).png">
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <strong>Potato Seeds</strong>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>(01)</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>#A2NG91234</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-danger">Cancel</button>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-success">Accepted</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid OrderCard text-center align-middle">
+                                <div class="row ">
+                                    <div class="col-md-2">
+                                        <img src="../assets/img/product (4).png">
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <strong>Potato Seeds</strong>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>(01)</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>#A2NG91234</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-danger">Cancel</button>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-success">Accepted</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid  OrderCard text-center align-middle">
+                                <div class="row ">
+                                    <div class="col-md-2">
+                                        <img src="../assets/img/product (4).png">
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <strong>Potato Seeds</strong>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>(01)</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>#A2NG91234</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-danger">Cancel</button>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-success">Accepted</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid OrderCard text-center align-middle">
+                                <div class="row ">
+                                    <div class="col-md-2">
+                                        <img src="../assets/img/product (4).png">
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <strong>Potato Seeds</strong>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>(01)</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>#A2NG91234</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-danger">Cancel</button>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-success">Accepted</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid  OrderCard text-center align-middle">
+                                <div class="row ">
+                                    <div class="col-md-2">
+                                        <img src="../assets/img/product (4).png">
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <strong>Potato Seeds</strong>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>(01)</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>#A2NG91234</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-danger">Cancel</button>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-success">Accepted</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid OrderCard text-center align-middle">
+                                <div class="row ">
+                                    <div class="col-md-2">
+                                        <img src="../assets/img/product (4).png">
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <strong>Potato Seeds</strong>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>(01)</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>#A2NG91234</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-danger">Cancel</button>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-success">Accepted</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid  OrderCard text-center align-middle">
+                                <div class="row ">
+                                    <div class="col-md-2">
+                                        <img src="../assets/img/product (4).png">
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <strong>Potato Seeds</strong>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>(01)</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>#A2NG91234</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-danger">Cancel</button>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-success">Accepted</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                    <label class="btn btn-outline-success rounded-pill" for="btnradio2">Pending</label>
+                    <div class="tab bg-white">
+                        <div class="order">
+
+                            <div class="container-fluid OrderCard text-center align-middle">
+                                <div class="row ">
+                                    <div class="col-md-2">
+                                        <img src="../assets/img/product (4).png">
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <strong>Potato Seeds</strong>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>(01)</span>
+                                    </div>
+                                    <div class="col-md-3 pt-md-4">
+                                        <span>#A2NG91234</span>
+                                    </div>
+                                    <div class="col-md-3 pt-md-4">
+                                        <button class="btn btn-warning">Pending</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid OrderCard text-center align-middle">
+                                <div class="row ">
+                                    <div class="col-md-2">
+                                        <img src="../assets/img/product (4).png">
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <strong>Potato Seeds</strong>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>(01)</span>
+                                    </div>
+                                    <div class="col-md-3 pt-md-4">
+                                        <span>#A2NG91234</span>
+                                    </div>
+                                    <div class="col-md-3 pt-md-4">
+                                        <button class="btn btn-warning">Pending</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid OrderCard text-center align-middle">
+                                <div class="row ">
+                                    <div class="col-md-2">
+                                        <img src="../assets/img/product (4).png">
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <strong>Potato Seeds</strong>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>(01)</span>
+                                    </div>
+                                    <div class="col-md-3 pt-md-4">
+                                        <span>#A2NG91234</span>
+                                    </div>
+                                    <div class="col-md-3 pt-md-4">
+                                        <button class="btn btn-warning">Pending</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid OrderCard text-center align-middle">
+                                <div class="row ">
+                                    <div class="col-md-2">
+                                        <img src="../assets/img/product (4).png">
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <strong>Potato Seeds</strong>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>(01)</span>
+                                    </div>
+                                    <div class="col-md-3 pt-md-4">
+                                        <span>#A2NG91234</span>
+                                    </div>
+                                    <div class="col-md-3 pt-md-4">
+                                        <button class="btn btn-warning">Pending</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid OrderCard text-center align-middle">
+                                <div class="row ">
+                                    <div class="col-md-2">
+                                        <img src="../assets/img/product (4).png">
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <strong>Potato Seeds</strong>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>(01)</span>
+                                    </div>
+                                    <div class="col-md-3 pt-md-4">
+                                        <span>#A2NG91234</span>
+                                    </div>
+                                    <div class="col-md-3 pt-md-4">
+                                        <button class="btn btn-warning">Pending</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid OrderCard text-center align-middle">
+                                <div class="row ">
+                                    <div class="col-md-2">
+                                        <img src="../assets/img/product (4).png">
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <strong>Potato Seeds</strong>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>(01)</span>
+                                    </div>
+                                    <div class="col-md-3 pt-md-4">
+                                        <span>#A2NG91234</span>
+                                    </div>
+                                    <div class="col-md-3 pt-md-4">
+                                        <button class="btn btn-warning">Pending</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid OrderCard text-center align-middle">
+                                <div class="row ">
+                                    <div class="col-md-2">
+                                        <img src="../assets/img/product (4).png">
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <strong>Potato Seeds</strong>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>(01)</span>
+                                    </div>
+                                    <div class="col-md-3 pt-md-4">
+                                        <span>#A2NG91234</span>
+                                    </div>
+                                    <div class="col-md-3 pt-md-4">
+                                        <button class="btn btn-warning">Pending</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                    <label class="btn btn-outline-success rounded-pill" for="btnradio3">Shipped</label>
+                    <div class="tab bg-white">
+                        <div class="order">
+
+                            <div class="container-fluid OrderCard text-center align-middle">
+                                <div class="row ">
+                                    <div class="col-md-2">
+                                        <img src="../assets/img/product (4).png">
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <strong>Potato Seeds</strong>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>(01)</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>#A2NG91234</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-danger">Cancel</button>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-success">Accepted</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid  OrderCard text-center align-middle">
+                                <div class="row ">
+                                    <div class="col-md-2">
+                                        <img src="../assets/img/product (4).png">
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <strong>Potato Seeds</strong>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>(01)</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>#A2NG91234</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-danger">Cancel</button>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-success">Accepted</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid OrderCard text-center align-middle">
+                                <div class="row ">
+                                    <div class="col-md-2">
+                                        <img src="../assets/img/product (4).png">
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <strong>Potato Seeds</strong>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>(01)</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>#A2NG91234</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-danger">Cancel</button>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-success">Accepted</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid  OrderCard text-center align-middle">
+                                <div class="row ">
+                                    <div class="col-md-2">
+                                        <img src="../assets/img/product (4).png">
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <strong>Potato Seeds</strong>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>(01)</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>#A2NG91234</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-danger">Cancel</button>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-success">Accepted</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid OrderCard text-center align-middle">
+                                <div class="row ">
+                                    <div class="col-md-2">
+                                        <img src="../assets/img/product (4).png">
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <strong>Potato Seeds</strong>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>(01)</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>#A2NG91234</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-danger">Cancel</button>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-success">Accepted</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid  OrderCard text-center align-middle">
+                                <div class="row ">
+                                    <div class="col-md-2">
+                                        <img src="../assets/img/product (4).png">
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <strong>Potato Seeds</strong>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>(01)</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>#A2NG91234</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-danger">Cancel</button>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-success">Accepted</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid OrderCard text-center align-middle">
+                                <div class="row ">
+                                    <div class="col-md-2">
+                                        <img src="../assets/img/product (4).png">
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <strong>Potato Seeds</strong>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>(01)</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>#A2NG91234</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-danger">Cancel</button>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-success">Accepted</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid  OrderCard text-center align-middle">
+                                <div class="row ">
+                                    <div class="col-md-2">
+                                        <img src="../assets/img/product (4).png">
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <strong>Potato Seeds</strong>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>(01)</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>#A2NG91234</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-danger">Cancel</button>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-success">Accepted</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+                    <label class="btn btn-outline-success rounded-pill" for="btnradio4">Cancelled</label>
+                    <div class="tab bg-white">
+                        <div class="order">
+
+                            <div class="container-fluid OrderCard text-center align-middle">
+                                <div class="row ">
+                                    <div class="col-md-2">
+                                        <img src="../assets/img/product (4).png">
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <strong>Potato Seeds</strong>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>(01)</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>#A2NG91234</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-danger">Cancel</button>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-success">Accepted</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid  OrderCard text-center align-middle">
+                                <div class="row ">
+                                    <div class="col-md-2">
+                                        <img src="../assets/img/product (4).png">
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <strong>Potato Seeds</strong>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>(01)</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>#A2NG91234</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-danger">Cancel</button>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-success">Accepted</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid OrderCard text-center align-middle">
+                                <div class="row ">
+                                    <div class="col-md-2">
+                                        <img src="../assets/img/product (4).png">
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <strong>Potato Seeds</strong>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>(01)</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>#A2NG91234</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-danger">Cancel</button>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-success">Accepted</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid  OrderCard text-center align-middle">
+                                <div class="row ">
+                                    <div class="col-md-2">
+                                        <img src="../assets/img/product (4).png">
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <strong>Potato Seeds</strong>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>(01)</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>#A2NG91234</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-danger">Cancel</button>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-success">Accepted</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid OrderCard text-center align-middle">
+                                <div class="row ">
+                                    <div class="col-md-2">
+                                        <img src="../assets/img/product (4).png">
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <strong>Potato Seeds</strong>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>(01)</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>#A2NG91234</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-danger">Cancel</button>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-success">Accepted</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid  OrderCard text-center align-middle">
+                                <div class="row ">
+                                    <div class="col-md-2">
+                                        <img src="../assets/img/product (4).png">
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <strong>Potato Seeds</strong>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>(01)</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>#A2NG91234</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-danger">Cancel</button>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-success">Accepted</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid OrderCard text-center align-middle">
+                                <div class="row ">
+                                    <div class="col-md-2">
+                                        <img src="../assets/img/product (4).png">
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <strong>Potato Seeds</strong>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>(01)</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>#A2NG91234</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-danger">Cancel</button>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-success">Accepted</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid  OrderCard text-center align-middle">
+                                <div class="row ">
+                                    <div class="col-md-2">
+                                        <img src="../assets/img/product (4).png">
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <strong>Potato Seeds</strong>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>(01)</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <span>#A2NG91234</span>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-danger">Cancel</button>
+                                    </div>
+                                    <div class="col-md-2 pt-md-4">
+                                        <button class="btn btn-success">Accepted</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <section>
+        <img width="100%" src="../assets/img/ba1bedc3400325b65c3620790810f2.png">
+    </section>
+
+    <section id="footer">
+        <footer class="footerClass">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-md-3 text-center center">
+                        <center> <img class="text-center" alt="Bootstrap Image Preview" src="assets/img/logo.png" />
+                        </center>
+                        <div class="container">
+                            <a class="p-2"><i class="bi bi-facebook"></i></a>
+                            <a class="p-2"><i class="bi bi-google"></i></a>
+                            <a class="p-2"><i class="bi bi-skype"></i></a>
+                            <a class="p-2"><i class="bi bi-twitter"></i></a>
+                            <a class="p-2"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <h2 class="fheading">New Launches</h2>
+                        <ul class="fnav">
+                            <li class="list-item">
+                                <a> About Us</a>
+                            </li>
+                            <li class="list-item">
+                                <a>New Launches</a>
+                            </li>
+                            <li class="list-item">
+                                <a>Sanitaryware</a>
+                            </li>
+                            <li class="list-item">
+                                <a> Faucets</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="col-md-2">
+                        <h2 class="fheading">Sanitaryware</h2>
+                        <ul class="fnav">
+                            <li class="list-item">
+                                <a> Bath Tubs</a>
+                            </li>
+                            <li class="list-item">
+                                <a>Shower Enclosures</a>
+                            </li>
+                            <li class="list-item">
+                                <a>Vanity Series</a>
+                            </li>
+                            <li class="list-item">
+                                <a> Bathroom Inspirations</a>
+                            </li>
+                            <li class="list-item">
+                                <a>ALCHYMI</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-2">
+                        <h2 class="fheading">Resources</h2>
+                        <ul class="fnav">
+                            <li class="list-item">
+                                <a>Shower Enclosures</a>
+                            </li>
+                            <li class="list-item">
+                                <a>Vanity Series</a>
+                            </li>
+                            <li class="list-item">
+                                <a>Bathroom Inspirations</a>
+                            </li>
+                            <li class="list-item">
+                                <a>ALCHYMI Bathrooms</a>
+                            </li>
+                            <li class="list-item">
+                                <a>Exports</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h2 class="fheading">
+                            Contact Us
+                        </h2>
+                        <ul class="fnav">
+                            <li class="list-item">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <a>36 D Topsia Road East, Near Trinamool Bhawan, opposite
+                                    Landmark Hotel, Kolkata, West Bengal 700039</a>
+                            </li>
+                            <li class="list-item">
+                                <i class="bi bi-telephone-fill"></i>
+                                <a>Support: 1800-200-7577</a>
+                            </li>
+                            <li class="list-item">
+                                <i class="bi bi-envelope-open-fill"></i>
+                                <a>Email: bathroomexpert@hindware.co.in</a>
+                            </li>
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+
+                            </form>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="copyright-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                            <div class="copyright-text">
+                                <p>Copyright &copy; 2022 Lyxelandflamingo.com All rights reserved</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                            <div class="footer-menu">
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">Terms</a></li>
+                                    <li><a href="#">Privacy</a></li>
+                                    <li><a href="#">Policy</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+        <!-- logout start-->
+        <div id="prompt" class="prompt-container">
+            <div class="prompt">
+                <div class="container text-center">
+                    <h3><strong>Log out</strong></h3>
+                    <hr>
+                    <p class="mb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                        has been the
+                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6 text-center">
+                            <button id="logout" class="btn btn-logout">Logout</button>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <button id="stayIn" class="btn btn-stay">Stay logging in</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- logout end -->
+    
+        <script>
+            $("#prompt").hide();
+            $(".open-prompt").on("click", function (event) {
+                event.preventDefault();
+                event.stopPropagation();
+                $("#prompt").show("closed");
+            });
+    
+            $("#stayIn").on("click", function () {
+                $("#prompt").fadeOut();
+            });
+            $("#logout").on("click", function () {
+                $("#prompt").fadeOut();
+            });
+            $(".prompt-container").on("click", function () {
+                $("#prompt").fadeOut();
+            });
+    
+        </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
