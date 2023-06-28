@@ -17,7 +17,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white ps-2">
         <a class="navbar-brand" href="#"><img src="assets/img/logo.png"> Krishi Web</a>
         <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,155 +71,155 @@
 
     <section id="main">
         <div class="container">
-        <div class="container-fluid inventoryBox text-center mt-5">
-            <div class="container inventoryCard d-none d-sm-block">
-                <div class="row">
-                    <div class="col-md-2">
-                        <strong>Product Image</strong>
+            <div class="container-fluid inventoryBox text-center mt-5">
+                <div class="container inventoryCard d-none d-sm-block">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <strong>Product Image</strong>
+                        </div>
+                        <div class="col-md-2">
+                            <strong>Product Name</strong>
+                        </div>
+                        <div class="col-md-2">
+                            <strong>QTY</strong>
+                        </div>
+                        <div class="col-md-3">
+                            <strong>Add or remove</strong>
+                        </div>
+                        <div class="col-md-3">
+                            <strong>Updated Time</strong>
+                        </div>
                     </div>
-                    <div class="col-md-2">
-                        <strong>Product Name</strong>
+                </div>
+
+                <div class="container inventoryCard">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="./assets/img/product (7).png" alt="img">
+                        </div>
+                        <div class="col-md-2 d-flex align-items-center justify-content-center">
+                            <h5>Potato Seeds.</h5>
+                        </div>
+                        <div class="col-md-2 d-flex align-items-center justify-content-center">
+                            <span>14 Remains</span>
+                        </div>
+                        <div class="col-md-3 d-flex text-center align-items-center justify-content-center">
+                            <button class="mybtn btn btn-sm text-center" onclick="decrement()">-</button>
+                            <h4 id="counting"></h4> <button class="mybtn btn btn-sm text-center"
+                                onclick="increment()">+</button>
+                        </div>
+                        <div class="col-md-3 d-flex text-center align-items-center justify-content-center">
+                            <p>You just updated 15 minutes ago</p>
+                        </div>
                     </div>
-                    <div class="col-md-2">
-                        <strong>QTY</strong>
+                </div>
+
+                <div class="container inventoryCard">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="./assets/img/product (4).png" alt="img">
+                        </div>
+                        <div class="col-md-2 d-flex align-items-center justify-content-center">
+                            <h5>Pumpkin Seeds</h5>
+                        </div>
+                        <div class="col-md-2 d-flex align-items-center justify-content-center">
+                            <span>40 Remains</span>
+                        </div>
+                        <div class="col-md-3 d-flex text-center align-items-center justify-content-center">
+                            <button class="mybtn btn btn-sm text-center">-</button>
+                            <h4 id="counting">6</h4> <button class="mybtn btn btn-sm text-center">+</button>
+                        </div>
+                        <div class="col-md-3 d-flex text-center align-items-center justify-content-center">
+                            <button class="btn btn-success">Update product inventory</button>
+                        </div>
                     </div>
-                    <div class="col-md-3">
-                        <strong>Add or remove</strong>
+                </div>
+
+                <div class="container inventoryCard">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="./assets/img/img8.png" alt="img">
+                        </div>
+                        <div class="col-md-2 d-flex align-items-center justify-content-center">
+                            <h5>Hemp Protein</h5>
+                        </div>
+                        <div class="col-md-2 d-flex align-items-center justify-content-center">
+                            <span>20 Remains</span>
+                        </div>
+                        <div class="col-md-3 d-flex text-center align-items-center justify-content-center">
+                            <button class="mybtn btn btn-sm text-center">-</button>
+                            <h4>0</h4> <button class="mybtn btn btn-sm text-center">+</button>
+                        </div>
+                        <div class="col-md-3 d-flex text-center align-items-center justify-content-center">
+                            <p>You just updated 15 minutes ago</p>
+                        </div>
                     </div>
-                    <div class="col-md-3">
-                        <strong>Updated Time</strong>
+                </div>
+
+                <div class="container inventoryCard">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="./assets/img/product (7).png" alt="img">
+                        </div>
+                        <div class="col-md-2 d-flex align-items-center justify-content-center">
+                            <h5>Potato Seeds</h5>
+                        </div>
+                        <div class="col-md-2 d-flex align-items-center justify-content-center">
+                            <span>40 Remains</span>
+                        </div>
+                        <div class="col-md-3 d-flex text-center align-items-center justify-content-center">
+                            <button class="mybtn btn btn-sm text-center">-</button>
+                            <h4>0</h4> <button class="mybtn btn btn-sm text-center">+</button>
+                        </div>
+                        <div class="col-md-3 d-flex text-center align-items-center justify-content-center">
+                            <p>You just updated 15 minutes ago</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container inventoryCard">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="./assets/img/product (7).png" alt="img">
+                        </div>
+                        <div class="col-md-2 d-flex align-items-center justify-content-center">
+                            <h5>Potato Seeds</h5>
+                        </div>
+                        <div class="col-md-2 d-flex align-items-center justify-content-center">
+                            <span>40 Remains</span>
+                        </div>
+                        <div class="col-md-3 d-flex text-center align-items-center justify-content-center">
+                            <button class="mybtn btn btn-sm text-center">-</button>
+                            <h4>0</h4> <button class="mybtn btn btn-sm text-center">+</button>
+                        </div>
+                        <div class="col-md-3 d-flex text-center align-items-center justify-content-center">
+                            <p>You just updated 15 minutes ago</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container inventoryCard">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="./assets/img/product (7).png" alt="img">
+                        </div>
+                        <div class="col-md-2 d-flex align-items-center justify-content-center">
+                            <h5>Potato Seeds</h5>
+                        </div>
+                        <div class="col-md-2 d-flex align-items-center justify-content-center">
+                            <span>40 Remains</span>
+                        </div>
+                        <div class="col-md-3 d-flex text-center align-items-center justify-content-center">
+                            <button class="mybtn btn btn-sm text-center">-</button>
+                            <h4>0</h4> <button class="mybtn btn btn-sm text-center">+</button>
+                        </div>
+                        <div class="col-md-3 d-flex text-center align-items-center justify-content-center">
+                            <p>You just updated 15 minutes ago</p>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="container inventoryCard">
-                <div class="row">
-                    <div class="col-md-2">
-                        <img src="../assets/img/product (7).png" alt="img">
-                    </div>
-                    <div class="col-md-2 d-flex align-items-center justify-content-center">
-                        <h5>Potato Seeds.</h5>
-                    </div>
-                    <div class="col-md-2 d-flex align-items-center justify-content-center">
-                        <span>40 Remains</span>
-                    </div>
-                    <div class="col-md-3 d-flex text-center align-items-center justify-content-center">
-                        <button class="mybtn btn btn-sm text-center" onclick="decrement()">-</button>
-                        <h4 id="counting"></h4> <button class="mybtn btn btn-sm text-center" onclick="increment()">+</button>
-                    </div>
-                    <div class="col-md-3 d-flex text-center align-items-center justify-content-center">
-                        <p>You just updated 15 minutes ago</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container inventoryCard">
-                <div class="row">
-                    <div class="col-md-2">
-                        <img src="../assets/img/product (7).png" alt="img">
-                    </div>
-                    <div class="col-md-2 d-flex align-items-center justify-content-center">
-                        <h5>Potato Seeds.</h5>
-                    </div>
-                    <div class="col-md-2 d-flex align-items-center justify-content-center">
-                        <span>40 Remains</span>
-                    </div>
-                    <div class="col-md-3 d-flex text-center align-items-center justify-content-center">
-                        <button class="mybtn btn btn-sm text-center">-</button>
-                        <h4 id="counting">6</h4> <button class="mybtn btn btn-sm text-center">+</button>
-                    </div>
-                    <div class="col-md-3 d-flex text-center align-items-center justify-content-center">
-                        <button class="btn btn-success">Update product inventory</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container inventoryCard">
-                <div class="row">
-                    <div class="col-md-2">
-                        <img src="../assets/img/product (7).png" alt="img">
-                    </div>
-                    <div class="col-md-2 d-flex align-items-center justify-content-center">
-                        <h5>Potato Seeds.</h5>
-                    </div>
-                    <div class="col-md-2 d-flex align-items-center justify-content-center">
-                        <span>40 Remains</span>
-                    </div>
-                    <div class="col-md-3 d-flex text-center align-items-center justify-content-center">
-                        <button class="mybtn btn btn-sm text-center">-</button>
-                        <h4>0</h4> <button class="mybtn btn btn-sm text-center">+</button>
-                    </div>
-                    <div class="col-md-3 d-flex text-center align-items-center justify-content-center">
-                        <p>You just updated 15 minutes ago</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container inventoryCard">
-                <div class="row">
-                    <div class="col-md-2">
-                        <img src="../assets/img/product (7).png" alt="img">
-                    </div>
-                    <div class="col-md-2 d-flex align-items-center justify-content-center">
-                        <h5>Potato Seeds.</h5>
-                    </div>
-                    <div class="col-md-2 d-flex align-items-center justify-content-center">
-                        <span>40 Remains</span>
-                    </div>
-                    <div class="col-md-3 d-flex text-center align-items-center justify-content-center">
-                        <button class="mybtn btn btn-sm text-center">-</button>
-                        <h4>0</h4> <button class="mybtn btn btn-sm text-center">+</button>
-                    </div>
-                    <div class="col-md-3 d-flex text-center align-items-center justify-content-center">
-                        <p>You just updated 15 minutes ago</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container inventoryCard">
-                <div class="row">
-                    <div class="col-md-2">
-                        <img src="../assets/img/product (7).png" alt="img">
-                    </div>
-                    <div class="col-md-2 d-flex align-items-center justify-content-center">
-                        <h5>Potato Seeds.</h5>
-                    </div>
-                    <div class="col-md-2 d-flex align-items-center justify-content-center">
-                        <span>40 Remains</span>
-                    </div>
-                    <div class="col-md-3 d-flex text-center align-items-center justify-content-center">
-                        <button class="mybtn btn btn-sm text-center">-</button>
-                        <h4>0</h4> <button class="mybtn btn btn-sm text-center">+</button>
-                    </div>
-                    <div class="col-md-3 d-flex text-center align-items-center justify-content-center">
-                        <p>You just updated 15 minutes ago</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container inventoryCard">
-                <div class="row">
-                    <div class="col-md-2">
-                        <img src="../assets/img/product (7).png" alt="img">
-                    </div>
-                    <div class="col-md-2 d-flex align-items-center justify-content-center">
-                        <h5>Potato Seeds.</h5>
-                    </div>
-                    <div class="col-md-2 d-flex align-items-center justify-content-center">
-                        <span>40 Remains</span>
-                    </div>
-                    <div class="col-md-3 d-flex text-center align-items-center justify-content-center">
-                        <button class="mybtn btn btn-sm text-center">-</button>
-                        <h4>0</h4> <button class="mybtn btn btn-sm text-center">+</button>
-                    </div>
-                    <div class="col-md-3 d-flex text-center align-items-center justify-content-center">
-                        <p>You just updated 15 minutes ago</p>
-                    </div>
-                </div>
-            </div>
-
-
-        </div></div>
+        </div>
     </section>
 
 
@@ -227,137 +227,27 @@
         <img width="100%" src="../assets/img/ba1bedc3400325b65c3620790810f2.png">
     </section>
 
-    <section id="footer">
-        <footer class="footerClass">
+    <section>
+        <footer>
             <div class="container">
-                <div class="row ">
-                    <div class="col-md-3 text-center center">
-                        <center> <img class="text-center" alt="Bootstrap Image Preview" src="assets/img/logo.png" />
-                        </center>
-                        <div class="container">
-                            <a class="p-2"><i class="bi bi-facebook"></i></a>
-                            <a class="p-2"><i class="bi bi-google"></i></a>
-                            <a class="p-2"><i class="bi bi-skype"></i></a>
-                            <a class="p-2"><i class="bi bi-twitter"></i></a>
-                            <a class="p-2"><i class="bi bi-linkedin"></i></a>
-                        </div>
+                <div class="row">
+                    <div class="col-md-6 text-md-start">
+                        <p>&copy; 2023 Made With <i class="bi bi-heart-fill text-danger"></i> by <a
+                                href="https://vaibhavpachpute.me/" target="_blank">Vaibhav</a></p>
                     </div>
-
-                    <div class="col-md-2">
-                        <h2 class="fheading">New Launches</h2>
-                        <ul class="fnav">
-                            <li class="list-item">
-                                <a> About Us</a>
-                            </li>
-                            <li class="list-item">
-                                <a>New Launches</a>
-                            </li>
-                            <li class="list-item">
-                                <a>Sanitaryware</a>
-                            </li>
-                            <li class="list-item">
-                                <a> Faucets</a>
-                            </li>
-
-                        </ul>
-                    </div>
-
-                    <div class="col-md-2">
-                        <h2 class="fheading">Sanitaryware</h2>
-                        <ul class="fnav">
-                            <li class="list-item">
-                                <a> Bath Tubs</a>
-                            </li>
-                            <li class="list-item">
-                                <a>Shower Enclosures</a>
-                            </li>
-                            <li class="list-item">
-                                <a>Vanity Series</a>
-                            </li>
-                            <li class="list-item">
-                                <a> Bathroom Inspirations</a>
-                            </li>
-                            <li class="list-item">
-                                <a>ALCHYMI</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-md-2">
-                        <h2 class="fheading">Resources</h2>
-                        <ul class="fnav">
-                            <li class="list-item">
-                                <a>Shower Enclosures</a>
-                            </li>
-                            <li class="list-item">
-                                <a>Vanity Series</a>
-                            </li>
-                            <li class="list-item">
-                                <a>Bathroom Inspirations</a>
-                            </li>
-                            <li class="list-item">
-                                <a>ALCHYMI Bathrooms</a>
-                            </li>
-                            <li class="list-item">
-                                <a>Exports</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-md-3">
-                        <h2 class="fheading">
-                            Contact Us
-                        </h2>
-                        <ul class="fnav">
-                            <li class="list-item">
-                                <i class="bi bi-geo-alt-fill"></i>
-                                <a>36 D Topsia Road East, Near Trinamool Bhawan, opposite
-                                    Landmark Hotel, Kolkata, West Bengal 700039</a>
-                            </li>
-                            <li class="list-item">
-                                <i class="bi bi-telephone-fill"></i>
-                                <a>Support: 1800-200-7577</a>
-                            </li>
-                            <li class="list-item">
-                                <i class="bi bi-envelope-open-fill"></i>
-                                <a>Email: bathroomexpert@hindware.co.in</a>
-                            </li>
-                            <form class="d-flex">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-
-                            </form>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="copyright-area">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-6 text-center text-lg-left">
-                            <div class="copyright-text">
-                                <p>Copyright &copy; 2022 Lyxelandflamingo.com All rights reserved</p>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
-                            <div class="footer-menu">
-                                <ul>
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">Terms</a></li>
-                                    <li><a href="#">Privacy</a></li>
-                                    <li><a href="#">Policy</a></li>
-                                    <li><a href="#">Contact</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="https://github.com/VaibhavPachpute21/" target="_blank"><i class="bi bi-github"></i></a>
+                        <a href="https://www.linkedin.com/in/vaibhavpachpute/" target="_blank"><i
+                                class="bi bi-linkedin"></i></a>
+                        <a href="https://vaibhavpachpute.me/" target="_blank"><i class="bi bi-globe"></i></a>
                     </div>
                 </div>
             </div>
         </footer>
     </section>
 
-       <!-- logout start-->
-       <div id="prompt" class="prompt-container">
+    <!-- logout start-->
+    <div id="prompt" class="prompt-container">
         <div class="prompt">
             <div class="container text-center">
                 <h3><strong>Log out</strong></h3>
