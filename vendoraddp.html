@@ -9,7 +9,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <link href="style.css" rel="stylesheet">
-    <link href="vendorinvoice.css" rel="stylesheet">
     <link href="vendoraddp.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -25,7 +24,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse"   id="navbarNavDropdown">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <div class="container">
                 <ul class="navbar-nav mr-auto flex-column vertical-nav bg-white mt-2">
                     <li class="nav-item ">
@@ -69,193 +68,91 @@
 
         </div>
     </nav>
-    <section id="main" >
+    <section id="main">
         <div class="container">
-        <div class="container-fluid addpstyle1 mt-5">
+            <div class="container-fluid addpstyle1 mt-5">
+                <div class="p-1"><input class="col-12 form-control" type="text" placeholder="Enter Product Title"></div>
+                <div class="row p-1">
+                    <div class="col-md-6 col-6"><input class="form-control" type="number" min="0" placeholder="Enter Product Price"></div>
+                    <div class="col-md-6 col-6">
+                        <div class="dropdown col-md-2 text-center">
+                            <button class="btn btn-light dropdown-toggle border-0" type="button"
+                                id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Choose Product Category
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">Fertilizers</a></li>
+                                <li><a class="dropdown-item" href="#">Seeds</a></li>
+                                <li><a class="dropdown-item" href="#">Pesticides</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-1"><textarea class="form-control" name="" id="" cols="100" rows="10" placeholder="Enter Product Details"></textarea></div>
+
+                <button class="mt-1 btn btn-success">Add Product</button>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <footer>
+            <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <p class="adp1">
-                        Lorem Ipsum” comes from the Latin phrase dolorem ipsum, meaning “pain itself.” It is dummy text that has been used since the 1500s as a placeholder for content. Rather than writing “your content here” over and over again, lorem ipsum provides a semi-normal distribution of words and letters. It is used by numerous web page editors as the default text for model sites.
-                    </p> 
-                    <button type="button" class="btn btn-success adb1" >
-                        Choose images 
-                    </button>
+                <div class="col-md-6 text-md-start"><p>&copy; 2023 Made With  <i class="bi bi-heart-fill text-danger"></i> by <a  href="https://vaibhavpachpute.me/" target="_blank">Vaibhav</a></p></div>
+                <div class="col-md-6 text-md-end">
+                    <a href="https://github.com/VaibhavPachpute21/" target="_blank"><i class="bi bi-github"></i></a>
+                    <a href="https://www.linkedin.com/in/vaibhavpachpute/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://vaibhavpachpute.me/" target="_blank"><i class="bi bi-globe"></i></a>
+                </div>
+            </div>
+        </div>
+        </footer>
+    </section>
+
+    <!-- logout start-->
+    <div id="prompt" class="prompt-container">
+        <div class="prompt">
+            <div class="container text-center">
+                <h3><strong>Log out</strong></h3>
+                <hr>
+                <p class="mb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                    has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                </p>
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <button id="logout" class="btn btn-logout">Logout</button>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <button id="stayIn" class="btn btn-stay">Stay logging in</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-        </section>
+    <!-- logout end -->
 
-            <section id="footer">
-        <footer class="footerClass">
-            <div class="container">
-                <div class="row ">
-                    <div class="col-md-3 text-center center">
-                        <center> <img class="text-center" alt="Bootstrap Image Preview" src="assets/img/logo.png" />
-                        </center>
-                        <div class="container">
-                            <a class="p-2"><i class="bi bi-facebook"></i></a>
-                            <a class="p-2"><i class="bi bi-google"></i></a>
-                            <a class="p-2"><i class="bi bi-skype"></i></a>
-                            <a class="p-2"><i class="bi bi-twitter"></i></a>
-                            <a class="p-2"><i class="bi bi-linkedin"></i></a>
-                        </div>
-                    </div>
+    <script>
+        $("#prompt").hide();
+        $(".open-prompt").on("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            $("#prompt").show("closed");
+        });
 
-                    <div class="col-md-2">
-                        <h2 class="fheading">New Launches</h2>
-                        <ul class="fnav">
-                            <li class="list-item">
-                                <a> About Us</a>
-                            </li>
-                            <li class="list-item">
-                                <a>New Launches</a>
-                            </li>
-                            <li class="list-item">
-                                <a>Sanitaryware</a>
-                            </li>
-                            <li class="list-item">
-                                <a> Faucets</a>
-                            </li>
+        $("#stayIn").on("click", function () {
+            $("#prompt").fadeOut();
+        });
+        $("#logout").on("click", function () {
+            $("#prompt").fadeOut();
+        });
+        $(".prompt-container").on("click", function () {
+            $("#prompt").fadeOut();
+        });
 
-                        </ul>
-                    </div>
-
-                    <div class="col-md-2">
-                        <h2 class="fheading">Sanitaryware</h2>
-                        <ul class="fnav">
-                            <li class="list-item">
-                                <a> Bath Tubs</a>
-                            </li>
-                            <li class="list-item">
-                                <a>Shower Enclosures</a>
-                            </li>
-                            <li class="list-item">
-                                <a>Vanity Series</a>
-                            </li>
-                            <li class="list-item">
-                                <a> Bathroom Inspirations</a>
-                            </li>
-                            <li class="list-item">
-                                <a>ALCHYMI</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-md-2">
-                        <h2 class="fheading">Resources</h2>
-                        <ul class="fnav">
-                            <li class="list-item">
-                                <a>Shower Enclosures</a>
-                            </li>
-                            <li class="list-item">
-                                <a>Vanity Series</a>
-                            </li>
-                            <li class="list-item">
-                                <a>Bathroom Inspirations</a>
-                            </li>
-                            <li class="list-item">
-                                <a>ALCHYMI Bathrooms</a>
-                            </li>
-                            <li class="list-item">
-                                <a>Exports</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-md-3">
-                        <h2 class="fheading">
-                            Contact Us
-                        </h2>
-                        <ul class="fnav">
-                            <li class="list-item">
-                                <i class="bi bi-geo-alt-fill"></i>
-                                <a>36 D Topsia Road East, Near Trinamool Bhawan, opposite
-                                    Landmark Hotel, Kolkata, West Bengal 700039</a>
-                            </li>
-                            <li class="list-item">
-                                <i class="bi bi-telephone-fill"></i>
-                                <a>Support: 1800-200-7577</a>
-                            </li>
-                            <li class="list-item">
-                                <i class="bi bi-envelope-open-fill"></i>
-                                <a>Email: bathroomexpert@hindware.co.in</a>
-                            </li>
-                            <form class="d-flex" >
-                                <input  class="form-control me-2"
-                                    type="search" placeholder="Search" aria-label="Search">
-
-                            </form>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="copyright-area">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-6 text-center text-lg-left">
-                            <div class="copyright-text">
-                                <p>Copyright &copy; 2022 Lyxelandflamingo.com All rights reserved</p>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
-                            <div class="footer-menu">
-                                <ul>
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">Terms</a></li>
-                                    <li><a href="#">Privacy</a></li>
-                                    <li><a href="#">Policy</a></li>
-                                    <li><a href="#">Contact</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </section>
-
-        <!-- logout start-->
-        <div id="prompt" class="prompt-container">
-            <div class="prompt">
-                <div class="container text-center">
-                    <h3><strong>Log out</strong></h3>
-                    <hr>
-                    <p class="mb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                        has been the
-                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    </p>
-                    <div class="row">
-                        <div class="col-md-6 text-center">
-                            <button id="logout" class="btn btn-logout">Logout</button>
-                        </div>
-                        <div class="col-md-6 text-center">
-                            <button id="stayIn" class="btn btn-stay">Stay logging in</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- logout end -->
-    
-        <script>
-            $("#prompt").hide();
-            $(".open-prompt").on("click", function (event) {
-                event.preventDefault();
-                event.stopPropagation();
-                $("#prompt").show("closed");
-            });
-    
-            $("#stayIn").on("click", function () {
-                $("#prompt").fadeOut();
-            });
-            $("#logout").on("click", function () {
-                $("#prompt").fadeOut();
-            });
-            $(".prompt-container").on("click", function () {
-                $("#prompt").fadeOut();
-            });
-    
-        </script>
-    
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

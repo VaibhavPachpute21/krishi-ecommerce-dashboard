@@ -1,9 +1,16 @@
 @import url('http://fonts.cdnfonts.com/css/gilroy-bold');
-body , *{
+
+body,
+* {
   font-family: 'Gilroy-SemiBold';
 }
 
-.btn{
+.btn {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.form-control {
   box-shadow: none !important;
   outline: none !important;
 }
@@ -18,6 +25,7 @@ body , *{
   right: 0;
   border-radius: 15px;
 }
+
 .prompt-container:closed {
   display: none;
 }
@@ -37,14 +45,14 @@ body , *{
   z-index: 1;
 }
 
-#prompt .btn-logout{
+#prompt .btn-logout {
   width: 100%;
   border: rgba(128, 128, 128, 0.461) solid 1px;
   border-radius: 0px !important;
   background-color: rgba(238, 233, 233, 0.603);
 }
 
-#prompt .btn-stay{
+#prompt .btn-stay {
   width: 100%;
   color: white;
   border-radius: 0px !important;
@@ -55,72 +63,75 @@ body , *{
 @media (min-width:992px) {
   #main {
     padding-left: 205px;
+    min-height: 100vh;
   }
-      .vertical-nav {
-      position: absolute;
-      top: 49.5px;
-      left: 0;
-      width: 200px;
-      height: 100vh;
-      background-color: #f8f8f8;
-      overflow-y: auto;
-      padding-top: 0px;
-      border: lightgray solid 1px;
-  
-    }
-  
-    .navbar {
-      border-bottom: lightgrey solid 1px;
-    }
 
-  
+  .vertical-nav {
+    position: absolute;
+    top: 49.5px;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: #f8f8f8;
+    overflow-y: auto;
+    padding-top: 0px;
+    border: lightgray solid 1px;
+
   }
 
   .navbar {
     border-bottom: lightgrey solid 1px;
   }
-  .active {
-    background-color: lightskyblue;
-  }
 
-  .vertical-nav .nav-item {
-    padding: 10px;
-    margin: 5px;
-    margin-top: 10px;
-    border-radius: 5px;
-    border: lightgray solid 1px;
-  }
-  
-  .vertical-nav .nav-item .nav-link {
-    color: black;
-    font-weight: bold;
-  }
-  
-  .vertical-nav .nav-item i {
-    color: green;
-    font-size: 20px;
-  }
 
-  nav a i{
-    text-decoration: none;
-    color: black;
 }
 
-nav img{
-  width:30px;
+.navbar {
+  border-bottom: lightgrey solid 1px;
+}
+
+.active {
+  background-color: lightskyblue;
+}
+
+.vertical-nav .nav-item {
+  padding: 10px;
+  margin: 5px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: lightgray solid 1px;
+}
+
+.vertical-nav .nav-item .nav-link {
+  color: black;
+  font-weight: bold;
+}
+
+.vertical-nav .nav-item i {
+  color: green;
+  font-size: 20px;
+}
+
+nav a i {
+  text-decoration: none;
+  color: black;
+}
+
+nav img {
+  width: 30px;
 }
 
 
 /* footer */
 
-footer{
+footer {
   padding: 20px 0px;
   background: rgba(39, 127, 60, 1);
   color: white;
   text-align: center;
 }
 
-footer p{
+footer p {
   color: white;
   font-size: 18px;
 }
@@ -136,21 +147,22 @@ footer i {
 
 
 
-.footerClass img{
+.footerClass img {
   align-self: center;
   border-radius: 70px;
 }
+
 .footerClass {
   padding: 30px;
   background: rgba(39, 127, 60, 1);
   color: white;
 }
 
-.footerClass i{
+.footerClass i {
   color: white;
 }
 
-.footerClass ul{
+.footerClass ul {
   list-style: none;
 }
 
@@ -163,8 +175,9 @@ footer i {
   font-size: 12px;
 }
 
-.footerClass form input{
-  border-radius: 90px; color: #219050;
+.footerClass form input {
+  border-radius: 90px;
+  color: #219050;
 }
 
 hr {
@@ -187,7 +200,7 @@ hr {
   text-decoration: none;
 }
 
-footer a{
+footer a {
   color: white;
   text-decoration: none;
 }
