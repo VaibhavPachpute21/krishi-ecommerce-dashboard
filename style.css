@@ -1,6 +1,6 @@
 @import url('http://fonts.cdnfonts.com/css/gilroy-bold');
 body , *{
-  font-family: 'Gilroy-SemiBold', sans-serif;
+  font-family: 'Gilroy-SemiBold';
 }
 
 .prompt-container:before {
@@ -107,6 +107,30 @@ nav img{
 
 
 /* footer */
+
+footer{
+  padding: 20px 0px;
+  background: rgba(39, 127, 60, 1);
+  color: white;
+  text-align: center;
+}
+
+footer p{
+  color: white;
+  font-size: 18px;
+}
+
+footer i {
+  font-size: 24px;
+  padding: 2px 5px;
+  color: white;
+}
+
+
+
+
+
+
 .footerClass img{
   align-self: center;
   border-radius: 70px;
@@ -155,6 +179,12 @@ hr {
   margin: 0;
   font-size: 14px;
   color: white;
+  text-decoration: none;
+}
+
+footer a{
+  color: white;
+  text-decoration: none;
 }
 
 /* .copyright-text p a{
@@ -168,7 +198,7 @@ hr {
 /* .footer-menu li:hover a{
   color: #ff5e14;
 } */
-.footer-menu li a {
-  font-size: 14px;
+.footer-menu li i {
+  font-size: 24px;
   color: white;
 }

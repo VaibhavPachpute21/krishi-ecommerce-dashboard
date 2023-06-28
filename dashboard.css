@@ -27,7 +27,7 @@
   }
 
   .recentOrders .recentOrderCard img {
-    width: 100%;
+    width: auto;
     height: 60px;
   }
   
@@ -117,7 +117,7 @@
 }
 
 .productRatings .ratingCard img{
-  width: 100px !important;
+  width: auto;
   height: 75px;
 }
 
@@ -216,7 +216,7 @@
 }
 
 .productRatings .ratingCard img{
-  width: 100%;
+  width: auto;
   height: 75px;
 }
 
