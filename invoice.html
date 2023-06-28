@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Krishi Web</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <link href="./vendorinvoice.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <a class="navbar-brand" href="#"><img src="assets/img/logo.png"> Krishi Web</a>
+        <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <div class="container">
+                <ul class="navbar-nav mr-auto flex-column vertical-nav bg-white mt-2">
+                    <li class="nav-item">
+                        <a class="nav-link " href="dashboard.html"><i class="bi bi-grid-fill"></i> Dashboard</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="invoice.html"><i class="bi bi-receipt"></i> Invoice</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inventory.html"><i class="bi bi-card-list"></i> Inventory</a>
+                    </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="vendoraddp.html"><i class="bi bi-people-fill"></i> Add product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="orders.html"><i class="bi bi-box"></i> Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="settings.html"><i class="bi bi-gear-fill"></i> Settings</a>
+                    </li>
+                    <li class="nav-item" id="prompt-link">
+                        <div id="prompt-link">
+                            <a href="#prompt" class="open-prompt nav-link"><i class="bi bi-box-arrow-right"></i> Log
+                                out</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex justify-content-end">
+                <ul class="navbar-nav d-flex ms-max align-items-end flex-row-reverse">
+                    <li class="nav-item">
+                        <div class="d-flex flex-row">
+                            <a class="p-2"><i class="bi bi-search"></i></a>
+                            <a class="p-2"><i class="bi bi-cart"></i></a>
+                            <a class="p-2"><i class="bi bi-person"></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <section id="main">
+        <div class="container">
+            <div class="container-fluid invoiceBox mt-5">
+
+                <div class=" table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <td>
+                                    <div class="dropdown col-md-2 text-center">
+                                        <button class="btn btn-light dropdown-toggle border-0" type="button"
+                                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="bi bi-list"></i>Filters
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li><a class="dropdown-item" href="#">Sort By Recent</a></li>
+                                            <li><a class="dropdown-item" href="#">Sort By Name</a></li>
+                                            <li><a class="dropdown-item" href="#">Sort By Oder</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td><h6>Product name</h6></td>
+                                <td><h6>QTY</h6></td>
+                                <td><h6>Order ID</h6></td>
+                                <td><h6>Delivery time</h6></td>
+                                <td><h6>Order Approval</h6></td>
+                                <td><h6>Download</h6></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="align-baseline">
+                                <td><img src="./assets/img/img8.png" alt=""></td>
+                                <td><h6>Fertilizers</h6></td>
+                                <td><span>(01)</span></td>
+                                <td><span>#A2NG9124634</span></td>
+                                <td><h6>Monday 10 June</h6></td>
+                                <td><button class="btn btn-secondary">Accepted </button></td>
+                                <td><button class="btn btn-success">Download</button></td>
+                            </tr>
+
+                            <tr class="align-baseline">
+                                <td><img src="./assets/img/product (4).png" alt=""></td>
+                                <td><h6>Pumpkin Seeds</h6></td>
+                                <td><span>(05)</span></td>
+                                <td><span>#R5R3EW12461</span></td>
+                                <td><h6>Monday 10 June</h6></td>
+                                <td><button class="btn btn-secondary">Accepted </button></td>
+                                <td><button class="btn btn-success">Download</button></td>
+                            </tr>
+
+                            <tr class="align-baseline">
+                                <td><img src="./assets/img/img8.png" alt=""></td>
+                                <td><h6>Fertilizers</h6></td>
+                                <td><span>(01)</span></td>
+                                <td><span>#A2NG9124634</span></td>
+                                <td><h6>Monday 10 June</h6></td>
+                                <td><button class="btn btn-secondary">Accepted </button></td>
+                                <td><button class="btn btn-success">Download</button></td>
+                            </tr>
+
+                            <tr class="align-baseline">
+                                <td><img src="./assets/img/product (4).png" alt=""></td>
+                                <td><h6>Pumpkin Seeds</h6></td>
+                                <td><span>(05)</span></td>
+                                <td><span>#R5R3EW12461</span></td>
+                                <td><h6>Monday 10 June</h6></td>
+                                <td><button class="btn btn-secondary">Accepted </button></td>
+                                <td><button class="btn btn-success">Download</button></td>
+                            </tr>
+
+                            <tr class="align-baseline">
+                                <td><img src="./assets/img/img8.png" alt=""></td>
+                                <td><h6>Fertilizers</h6></td>
+                                <td><span>(01)</span></td>
+                                <td><span>#A2NG9124634</span></td>
+                                <td><h6>Monday 10 June</h6></td>
+                                <td><button class="btn btn-secondary">Accepted </button></td>
+                                <td><button class="btn btn-success">Download</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <img width="100%" src="../assets/img/ba1bedc3400325b65c3620790810f2.png">
+    </section>
+
+    <section>
+        <footer>
+            <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-md-start"><p>&copy; 2023 Made With  <i class="bi bi-heart-fill text-danger"></i> by <a  href="https://vaibhavpachpute.me/" target="_blank">Vaibhav</a></p></div>
+                <div class="col-md-6 text-md-end">
+                    <a href="https://github.com/VaibhavPachpute21/" target="_blank"><i class="bi bi-github"></i></a>
+                    <a href="https://www.linkedin.com/in/vaibhavpachpute/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://vaibhavpachpute.me/" target="_blank"><i class="bi bi-globe"></i></a>
+                </div>
+            </div>
+        </div>
+        </footer>
+    </section>
+
+    <!-- logout start-->
+    <div id="prompt" class="prompt-container">
+        <div class="prompt">
+            <div class="container text-center">
+                <h3><strong>Log out</strong></h3>
+                <hr>
+                <p class="mb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                    has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                </p>
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <button id="logout" class="btn btn-logout">Logout</button>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <button id="stayIn" class="btn btn-stay">Stay logging in</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- logout end -->
+
+    <script>
+        $("#prompt").hide();
+        $(".open-prompt").on("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            $("#prompt").show("closed");
+        });
+
+        $("#stayIn").on("click", function () {
+            $("#prompt").fadeOut();
+        });
+        $("#logout").on("click", function () {
+            $("#prompt").fadeOut();
+        });
+        $(".prompt-container").on("click", function () {
+            $("#prompt").fadeOut();
+        });
+
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

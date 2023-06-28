@@ -1,3 +1,36 @@
+.invoiceBox{
+    padding: 20px;
+    margin: 10px;
+    border: lightgray solid 1px;
+    border-radius: 15px;
+}
+
+.invoiceBox img{
+    height: 100px;
+    width: auto;
+    max-width: 90px;
+}
+
+.invoiceBox span {
+    color: gray;
+}
+
+.invoiceBox .btn-success {
+    background-color: rgba(144, 238, 144, 0.527);
+    color: green;
+    font-weight: 600;
+    border: none;
+}
+
+.invoiceBox .btn-secondary{
+    color: gray;
+    font-weight: 600;
+    border: none;
+    background-color: rgba(128, 128, 128, 0.527);
+
+}
+
+
 .vs1
 {
 padding: 30px ; 
