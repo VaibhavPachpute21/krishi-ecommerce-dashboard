@@ -74,7 +74,8 @@
             <div class="container-fluid addpstyle1 mt-5">
                 <div class="p-1"><input class="col-12 form-control" type="text" placeholder="Enter Product Title"></div>
                 <div class="row p-1">
-                    <div class="col-md-6 col-6"><input class="form-control" type="number" min="0" placeholder="Enter Product Price"></div>
+                    <div class="col-md-6 col-6"><input class="form-control" type="number" min="0"
+                            placeholder="Enter Product Price"></div>
                     <div class="col-md-6 col-6">
                         <div class="dropdown col-md-2 text-center">
                             <button class="btn btn-light dropdown-toggle border-0" type="button"
@@ -89,7 +90,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="p-1"><textarea class="form-control" name="" id="" cols="100" rows="10" placeholder="Enter Product Details"></textarea></div>
+                <div class="p-1"><textarea class="form-control" name="" id="" cols="100" rows="10"
+                        placeholder="Enter Product Details"></textarea></div>
 
                 <button class="mt-1 btn btn-success">Add Product</button>
 
@@ -104,15 +106,19 @@
     <section>
         <footer>
             <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-md-start"><p>&copy; 2023 Made With  <i class="bi bi-heart-fill text-danger"></i> by <a  href="https://vaibhavpachpute.me/" target="_blank">Vaibhav</a></p></div>
-                <div class="col-md-6 text-md-end">
-                    <a href="https://github.com/VaibhavPachpute21/" target="_blank"><i class="bi bi-github"></i></a>
-                    <a href="https://www.linkedin.com/in/vaibhavpachpute/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                    <a href="https://vaibhavpachpute.me/" target="_blank"><i class="bi bi-globe"></i></a>
+                <div class="row">
+                    <div class="col-md-6 text-md-start">
+                        <p>&copy; 2023 Made With <i class="bi bi-heart-fill text-danger"></i> by <a
+                                href="https://vaibhavpachpute.me/" target="_blank">Vaibhav</a></p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="https://github.com/VaibhavPachpute21/" target="_blank"><i class="bi bi-github"></i></a>
+                        <a href="https://www.linkedin.com/in/vaibhavpachpute/" target="_blank"><i
+                                class="bi bi-linkedin"></i></a>
+                        <a href="https://vaibhavpachpute.me/" target="_blank"><i class="bi bi-globe"></i></a>
+                    </div>
                 </div>
             </div>
-        </div>
         </footer>
     </section>
 
@@ -152,6 +158,7 @@
         });
         $("#logout").on("click", function () {
             $("#prompt").fadeOut();
+            window.location.href = "./login.html";
         });
         $(".prompt-container").on("click", function () {
             $("#prompt").fadeOut();
@@ -160,4 +167,5 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

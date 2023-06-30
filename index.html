@@ -58,9 +58,9 @@
                 <ul class="navbar-nav d-flex ms-max align-items-end flex-row-reverse">
                     <li class="nav-item">
                         <div class="d-flex flex-row">
-                            <a href="#" class="p-2"><i class="bi bi-search"></i></a>
-                            <a href="#" class="p-2"><i class="bi bi-cart"></i></a>
-                            <a href="#" class="p-2"><i class="bi bi-person"></i></a>
+                            <div><a href="#" class="p-2"><i class="bi bi-search"></i></a></div>
+                            <div><a href="#" class="p-2"><i class="bi bi-cart"></i></a></div>
+                            <div><a href="#" class="p-2"><i class="bi bi-person"></i></a></div>
                         </div>
                     </li>
                 </ul>
@@ -271,15 +271,19 @@
     <section>
         <footer>
             <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-md-start"><p>&copy; 2023 Made With  <i class="bi bi-heart-fill text-danger"></i> by <a  href="https://vaibhavpachpute.me/" target="_blank">Vaibhav</a></p></div>
-                <div class="col-md-6 text-md-end">
-                    <a href="https://github.com/VaibhavPachpute21/" target="_blank"><i class="bi bi-github"></i></a>
-                    <a href="https://www.linkedin.com/in/vaibhavpachpute/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                    <a href="https://vaibhavpachpute.me/" target="_blank"><i class="bi bi-globe"></i></a>
+                <div class="row">
+                    <div class="col-md-6 text-md-start">
+                        <p>&copy; 2023 Made With <i class="bi bi-heart-fill text-danger"></i> by <a
+                                href="https://vaibhavpachpute.me/" target="_blank">Vaibhav</a></p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="https://github.com/VaibhavPachpute21/" target="_blank"><i class="bi bi-github"></i></a>
+                        <a href="https://www.linkedin.com/in/vaibhavpachpute/" target="_blank"><i
+                                class="bi bi-linkedin"></i></a>
+                        <a href="https://vaibhavpachpute.me/" target="_blank"><i class="bi bi-globe"></i></a>
+                    </div>
                 </div>
             </div>
-        </div>
         </footer>
     </section>
 
@@ -319,6 +323,7 @@
         });
         $("#logout").on("click", function () {
             $("#prompt").fadeOut();
+            window.location.href = "./login.html";
         });
         $(".prompt-container").on("click", function () {
             $("#prompt").fadeOut();
